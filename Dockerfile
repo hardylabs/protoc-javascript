@@ -1,6 +1,3 @@
 FROM node
-WORKDIR /usr/src/app
-COPY package*.json ./
-RUN npm install
-COPY . .
-CMD ["./build.sh"]
+RUN npm i -g grpc-tools && \
+    npm i -g grpc_tools_protoc_ts
